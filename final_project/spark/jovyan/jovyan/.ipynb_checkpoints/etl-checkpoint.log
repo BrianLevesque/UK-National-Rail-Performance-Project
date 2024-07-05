@@ -1,0 +1,215 @@
+2024-07-04 16:27:23,249 - INFO - Found 15 new Parquet files.
+2024-07-04 16:27:23,249 - INFO - Starting to parse Parquet files in directory ./xml/.
+2024-07-04 16:27:23,251 - INFO - Found 15 parquet files.
+2024-07-04 16:27:23,251 - INFO - Parsing file: ./xml/part-00000-1d3ac863-0301-43a1-b5b7-0e01c9f96ba7-c000.snappy.parquet
+2024-07-04 16:27:23,363 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,364 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,364 - INFO - Parsing file: ./xml/part-00000-70d42373-c209-474a-bd81-15ec029542b1-c000.snappy.parquet
+2024-07-04 16:27:23,370 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,370 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,371 - INFO - Parsing file: ./xml/part-00000-728a3c2e-4ce1-4dbb-9ba9-8c3f0bbff13f-c000.snappy.parquet
+2024-07-04 16:27:23,375 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,375 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,376 - INFO - Parsing file: ./xml/part-00000-73aaf147-dbc6-4766-9259-492904867a9b-c000.snappy.parquet
+2024-07-04 16:27:23,381 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,382 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,382 - INFO - Parsing file: ./xml/part-00000-7f8f52d3-0292-44a5-b120-660ff3208241-c000.snappy.parquet
+2024-07-04 16:27:23,386 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,386 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,387 - INFO - Parsing file: ./xml/part-00000-96c07cfd-9e4e-4407-bc9b-6a81a0295468-c000.snappy.parquet
+2024-07-04 16:27:23,390 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,391 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,391 - INFO - Parsing file: ./xml/part-00000-99993539-36dc-4dee-ace5-5044bc71cb77-c000.snappy.parquet
+2024-07-04 16:27:23,395 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,395 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,395 - INFO - Parsing file: ./xml/part-00000-b46b9c34-6430-4f48-ac37-2e4bfa68edaa-c000.snappy.parquet
+2024-07-04 16:27:23,399 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,400 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,400 - INFO - Parsing file: ./xml/part-00000-b720a5e7-a2c4-4cc5-b483-9d940c8afbac-c000.snappy.parquet
+2024-07-04 16:27:23,404 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,404 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,404 - INFO - Parsing file: ./xml/part-00000-b78cbf5a-0745-4619-bca3-235136d6a22f-c000.snappy.parquet
+2024-07-04 16:27:23,408 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,408 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,408 - INFO - Parsing file: ./xml/part-00000-d9a914cc-02ff-4b46-abcd-9040823f29ce-c000.snappy.parquet
+2024-07-04 16:27:23,412 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,412 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,412 - INFO - Parsing file: ./xml/part-00000-e1699f3c-0c03-4781-b16b-51b4d7c22043-c000.snappy.parquet
+2024-07-04 16:27:23,416 - INFO - Parsing file: ./xml/part-00000-ec04aa2e-8039-4169-8b0a-9f5a87449ee4-c000.snappy.parquet
+2024-07-04 16:27:23,419 - INFO - Starting to parse XML content.
+2024-07-04 16:27:23,420 - INFO - Finished parsing XML content.
+2024-07-04 16:27:23,420 - INFO - Parsing file: ./xml/part-00000-f834fa39-0500-4fb6-ace0-6e34bbb20906-c000.snappy.parquet
+2024-07-04 16:27:23,423 - ERROR - Error occurred while parsing parquet directory: Could not open Parquet input source '<Buffer>': Parquet file size is 0 bytes
+Traceback (most recent call last):
+  File "/home/jovyan/jovyan/clean_data.py", line 70, in parse_parquet_directory
+    df = pd.read_parquet(file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/pandas/io/parquet.py", line 503, in read_parquet
+    return impl.read(
+           ^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/pandas/io/parquet.py", line 251, in read
+    result = self.api.parquet.read_table(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/pyarrow/parquet/core.py", line 2955, in read_table
+    dataset = _ParquetDatasetV2(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/pyarrow/parquet/core.py", line 2495, in __init__
+    [fragment], schema=schema or fragment.physical_schema,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/_dataset.pyx", line 1357, in pyarrow._dataset.Fragment.physical_schema.__get__
+  File "pyarrow/error.pxi", line 144, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 100, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: Could not open Parquet input source '<Buffer>': Parquet file size is 0 bytes
+2024-07-04 16:27:23,429 - INFO - Starting to transform data.
+2024-07-04 16:27:23,430 - ERROR - Error occurred while transforming data: 'NoneType' object has no attribute 'explode'
+Traceback (most recent call last):
+  File "/home/jovyan/jovyan/clean_data.py", line 96, in transform
+    exploded_df = df.explode('locations')
+                  ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'explode'
+2024-07-04 16:27:23,431 - ERROR - Error occurred in the main function:
+Traceback (most recent call last):
+  File "/home/jovyan/jovyan/clean_data.py", line 177, in main
+    if 0 in df.columns:
+            ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'columns'
+2024-07-04 16:28:23,434 - INFO - Found 45 new Parquet files.
+2024-07-04 16:28:23,434 - INFO - Starting to parse Parquet files in directory ./xml/.
+2024-07-04 16:28:23,435 - INFO - Found 45 parquet files.
+2024-07-04 16:28:23,435 - INFO - Parsing file: ./xml/part-00000-028d8ba2-694d-48b7-adfc-cbefe63360f5-c000.snappy.parquet
+2024-07-04 16:28:23,438 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,439 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,439 - INFO - Parsing file: ./xml/part-00000-10fbab14-86ea-4ebb-9fad-74a4ddf91c84-c000.snappy.parquet
+2024-07-04 16:28:23,442 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,442 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,442 - INFO - Parsing file: ./xml/part-00000-149f39b7-db7f-497a-9faa-bbec27ede449-c000.snappy.parquet
+2024-07-04 16:28:23,445 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,445 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,445 - INFO - Parsing file: ./xml/part-00000-15c60cde-6381-48c4-856b-b457e49c50e7-c000.snappy.parquet
+2024-07-04 16:28:23,448 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,448 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,449 - INFO - Parsing file: ./xml/part-00000-1d3ac863-0301-43a1-b5b7-0e01c9f96ba7-c000.snappy.parquet
+2024-07-04 16:28:23,451 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,452 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,452 - INFO - Parsing file: ./xml/part-00000-1ff3a9f8-c031-4eb1-b1c5-30334a7768bd-c000.snappy.parquet
+2024-07-04 16:28:23,455 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,455 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,455 - INFO - Parsing file: ./xml/part-00000-37496675-b5d5-41d2-af94-cb230fc24917-c000.snappy.parquet
+2024-07-04 16:28:23,458 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,458 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,459 - INFO - Parsing file: ./xml/part-00000-37b2ea44-28d9-4789-9672-6d4619ac8741-c000.snappy.parquet
+2024-07-04 16:28:23,461 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,462 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,462 - INFO - Parsing file: ./xml/part-00000-399c4f2a-fcee-4a11-aff5-2e80a2d8628a-c000.snappy.parquet
+2024-07-04 16:28:23,466 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,466 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,466 - INFO - Parsing file: ./xml/part-00000-409071bf-7ce1-4347-b4ba-9434b5d98320-c000.snappy.parquet
+2024-07-04 16:28:23,470 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,470 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,471 - INFO - Parsing file: ./xml/part-00000-440e2857-bace-4e90-a3d5-965428459a3f-c000.snappy.parquet
+2024-07-04 16:28:23,475 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,476 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,476 - INFO - Parsing file: ./xml/part-00000-4497ffae-bbd6-45f6-9c92-3b3dca22f258-c000.snappy.parquet
+2024-07-04 16:28:23,480 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,481 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,481 - INFO - Parsing file: ./xml/part-00000-54b13f31-4a8f-42ed-b1a7-c63304d27bb2-c000.snappy.parquet
+2024-07-04 16:28:23,485 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,485 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,485 - INFO - Parsing file: ./xml/part-00000-70d42373-c209-474a-bd81-15ec029542b1-c000.snappy.parquet
+2024-07-04 16:28:23,489 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,490 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,490 - INFO - Parsing file: ./xml/part-00000-728a3c2e-4ce1-4dbb-9ba9-8c3f0bbff13f-c000.snappy.parquet
+2024-07-04 16:28:23,495 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,495 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,495 - INFO - Parsing file: ./xml/part-00000-73aaf147-dbc6-4766-9259-492904867a9b-c000.snappy.parquet
+2024-07-04 16:28:23,499 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,500 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,500 - INFO - Parsing file: ./xml/part-00000-765ddf84-1867-4c1d-9886-e5be3cd38fdd-c000.snappy.parquet
+2024-07-04 16:28:23,504 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,505 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,505 - INFO - Parsing file: ./xml/part-00000-7f8f52d3-0292-44a5-b120-660ff3208241-c000.snappy.parquet
+2024-07-04 16:28:23,510 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,510 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,511 - INFO - Parsing file: ./xml/part-00000-879235b6-b663-46d3-8a92-06fee81dcbe2-c000.snappy.parquet
+2024-07-04 16:28:23,514 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,514 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,514 - INFO - Parsing file: ./xml/part-00000-8977b8e0-2a3c-4302-b20f-f4b20cbf7810-c000.snappy.parquet
+2024-07-04 16:28:23,520 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,520 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,520 - INFO - Parsing file: ./xml/part-00000-92685b67-a6d4-4de0-86b4-c2b4e145ca2b-c000.snappy.parquet
+2024-07-04 16:28:23,524 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,524 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,525 - INFO - Parsing file: ./xml/part-00000-96c07cfd-9e4e-4407-bc9b-6a81a0295468-c000.snappy.parquet
+2024-07-04 16:28:23,529 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,529 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,530 - INFO - Parsing file: ./xml/part-00000-99993539-36dc-4dee-ace5-5044bc71cb77-c000.snappy.parquet
+2024-07-04 16:28:23,534 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,534 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,535 - INFO - Parsing file: ./xml/part-00000-a86af726-c5ed-48f5-88fd-742af4c43835-c000.snappy.parquet
+2024-07-04 16:28:23,539 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,540 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,540 - INFO - Parsing file: ./xml/part-00000-ac9064a0-9fc9-446a-83c0-8f07b771485c-c000.snappy.parquet
+2024-07-04 16:28:23,544 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,544 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,544 - INFO - Parsing file: ./xml/part-00000-ae23dcea-61de-4a5d-bd53-2b829ecbfb62-c000.snappy.parquet
+2024-07-04 16:28:23,549 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,549 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,549 - INFO - Parsing file: ./xml/part-00000-b46b9c34-6430-4f48-ac37-2e4bfa68edaa-c000.snappy.parquet
+2024-07-04 16:28:23,553 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,553 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,554 - INFO - Parsing file: ./xml/part-00000-b720a5e7-a2c4-4cc5-b483-9d940c8afbac-c000.snappy.parquet
+2024-07-04 16:28:23,558 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,559 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,559 - INFO - Parsing file: ./xml/part-00000-b78cbf5a-0745-4619-bca3-235136d6a22f-c000.snappy.parquet
+2024-07-04 16:28:23,563 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,563 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,564 - INFO - Parsing file: ./xml/part-00000-b8067974-e254-4fee-94ba-087d238e28e7-c000.snappy.parquet
+2024-07-04 16:28:23,567 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,568 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,568 - INFO - Parsing file: ./xml/part-00000-c0c7ced1-6a28-40f3-8b83-80f53d562600-c000.snappy.parquet
+2024-07-04 16:28:23,571 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,571 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,572 - INFO - Parsing file: ./xml/part-00000-c76618a2-9b44-4e82-8a93-e07f6f7bb271-c000.snappy.parquet
+2024-07-04 16:28:23,577 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,577 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,577 - INFO - Parsing file: ./xml/part-00000-ca62247e-f908-447b-a959-ffefa3f0234d-c000.snappy.parquet
+2024-07-04 16:28:23,581 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,582 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,582 - INFO - Parsing file: ./xml/part-00000-cb7ae698-d7c1-44cc-86ec-49e5b5a72f85-c000.snappy.parquet
+2024-07-04 16:28:23,586 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,587 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,587 - INFO - Parsing file: ./xml/part-00000-d5a6570c-f579-4be5-a534-56d686f82ed7-c000.snappy.parquet
+2024-07-04 16:28:23,591 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,591 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,591 - INFO - Parsing file: ./xml/part-00000-d9a914cc-02ff-4b46-abcd-9040823f29ce-c000.snappy.parquet
+2024-07-04 16:28:23,596 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,596 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,596 - INFO - Parsing file: ./xml/part-00000-df647a57-8f23-443e-99bf-492e900a7ce1-c000.snappy.parquet
+2024-07-04 16:28:23,600 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,600 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,600 - INFO - Parsing file: ./xml/part-00000-e1699f3c-0c03-4781-b16b-51b4d7c22043-c000.snappy.parquet
+2024-07-04 16:28:23,604 - INFO - Parsing file: ./xml/part-00000-e50848a3-c932-4c2b-ab33-b6b26246319d-c000.snappy.parquet
+2024-07-04 16:28:23,607 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,608 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,608 - INFO - Parsing file: ./xml/part-00000-e6bb1e5f-df4d-459f-b916-85b9ddaa7b2d-c000.snappy.parquet
+2024-07-04 16:28:23,612 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,613 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,613 - INFO - Parsing file: ./xml/part-00000-ebe94984-deaa-404e-8584-f64bd3612d3b-c000.snappy.parquet
+2024-07-04 16:28:23,617 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,617 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,617 - INFO - Parsing file: ./xml/part-00000-ec04aa2e-8039-4169-8b0a-9f5a87449ee4-c000.snappy.parquet
+2024-07-04 16:28:23,622 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,622 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,622 - INFO - Parsing file: ./xml/part-00000-f582b862-d593-4212-a372-e06dc413081f-c000.snappy.parquet
+2024-07-04 16:28:23,626 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,626 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,627 - INFO - Parsing file: ./xml/part-00000-f834fa39-0500-4fb6-ace0-6e34bbb20906-c000.snappy.parquet
+2024-07-04 16:28:23,631 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,631 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,631 - INFO - Parsing file: ./xml/part-00000-fb702bb0-0d73-43ae-b03e-3bf47c3b782b-c000.snappy.parquet
+2024-07-04 16:28:23,635 - INFO - Starting to parse XML content.
+2024-07-04 16:28:23,635 - INFO - Finished parsing XML content.
+2024-07-04 16:28:23,636 - INFO - Finished parsing Parquet files in directory ./xml/.
+2024-07-04 16:28:23,636 - INFO - Starting to transform data.
+2024-07-04 16:28:23,684 - INFO - Finished transforming data.
+2024-07-04 16:28:25,817 - INFO - Successfully wrote to output files and Postgres.
