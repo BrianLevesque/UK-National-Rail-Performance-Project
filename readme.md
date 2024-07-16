@@ -1,7 +1,7 @@
 ## UK National Rail Data Analysis
 A Data Analysis looking into the UK National Rail system.
 ### Description
-This Data Analysis takes in data from the UK National Rail API’s Darwin feed and a few other sources. Loaded it in a PostgreSQL database. It cleans the data and creates a few calculated columns before performing analysis using pandas and PowerBI to answer the following questions: Where and How to get the data? What is in our data? What are we going to answer? Are the trains delayed? How long are the trains delayed? When is the delay observed? Who is causing more delays? Can we predict if the train is going to be delayed?
+This data analysis takes in data from the UK National Rail API’s Darwin feed (https://opendata.nationalrail.co.uk/) and a few other sources. Loaded it in a PostgreSQL database. It cleans the data before performing analysis using pandas and PowerBI to answer the following questions: Where and How to get the data? What is in our data? What are we going to answer? Are the trains delayed? How long are the trains delayed? When is the delay observed? Who is causing more delays? Can we predict if the train is going to be delayed?
 
 ### Dependencies
 Pandas, Numpy, Datetime, matplotlib.pyplot, seaborn, warnings,OSGB36toWGS84 from bng_latlon, sklearn, pyspark, sqlalchemy, psycopg2, json, glob, xml.etree.ElementTree, logging, time, Docker, Apache Kafka
