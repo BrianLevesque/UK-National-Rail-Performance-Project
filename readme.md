@@ -41,7 +41,7 @@ Docker images for the following applications have been built and docker containe
 
 #### 2. **Ingesting Data and Pre-processing**
 
-Retrieved data from PostgreSQL database and performed necessary Data Ingestion and Pre-processing and the cleaned data was exported into csv for further data visualizations in PowerBI [UK National Rail Data_Analysis_Final.ipynb](https://github.com/BrianLevesque/GC_CapstoneProject/blob/feature-ilackkeya/UK%20National%20Rail%20Data_Analysis_Final.ipynb).
+Retrieved data from PostgreSQL database and performed necessary Data Ingestion and Pre-processing and the cleaned data was exported into csv for further data visualizations in PowerBI ([UK National Rail Data_Analysis_Final.ipynb](https://github.com/BrianLevesque/GC_CapstoneProject/blob/feature-ilackkeya/UK%20National%20Rail%20Data_Analysis_Final.ipynb)).
 
 #### 3. **Predictive Analytics**
 
