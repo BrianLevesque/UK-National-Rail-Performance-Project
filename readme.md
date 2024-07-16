@@ -30,14 +30,18 @@ As Data Analysts, we gathered essential data from [UK National Rail Data Portal]
 Docker images for the following applications have been built and docker container was composed to start the pipeline each of which performs the following functions:
 
 **Kafka Zookeeper**: A service necessary for running the Kafka broker. It helps in maintaining the configuration information and provides distributed synchronization.
+
 **Kafka Broker**: The heart of the Kafka system that maintains the published data. Each Kafka broker can handle terabytes of messages without performance impact.
+
 **Kafka Producer (Python)**: This application pulls data from the National Rail APIs and publishes it to Kafka. It's designed to run indefinitely, continually pulling and publishing data.
+
 **Kafka Consumer (Spark)**: A Spark application that consumes data from Kafka, processes it and writes the result to a PostgreSQL database.
+
 **PostgreSQL Database (db)**: Stores the processed data from the Spark consumer for later analysis.
 
 #### 2. **Ingesting Data and Pre-processing**
 
-Retrieved data from PostgreSQL database and performed necessary Data Ingestion and Pre-processing and the cleaned data was exported into csv for further data visualizations in PowerBI. [UK National Rail Data_Analysis_Final.ipynb](https://github.com/BrianLevesque/GC_CapstoneProject/blob/feature-ilackkeya/UK%20National%20Rail%20Data_Analysis_Final.ipynb)
+Retrieved data from PostgreSQL database and performed necessary Data Ingestion and Pre-processing and the cleaned data was exported into csv for further data visualizations in PowerBI [UK National Rail Data_Analysis_Final.ipynb](https://github.com/BrianLevesque/GC_CapstoneProject/blob/feature-ilackkeya/UK%20National%20Rail%20Data_Analysis_Final.ipynb).
 
 #### 3. **Predictive Analytics**
 
@@ -45,7 +49,7 @@ Built a predictive analytics model on predicting the delay using Logistic Regres
 
 #### 4. **Data Visualizations**
 
-Gathered visual insights utilizing matplotlib, seaborn libraries and Power BI [UK National Rail Performance Overview.pbix](https://github.com/BrianLevesque/GC_CapstoneProject/blob/feature-ilackkeya/UK%20National%20Rail%20Performance%20Overview.pbix) to answer our questions. 
+Gathered visual insights utilizing matplotlib, seaborn libraries and Power BI ([UK National Rail Performance Overview.pbix](https://github.com/BrianLevesque/GC_CapstoneProject/blob/feature-ilackkeya/UK%20National%20Rail%20Performance%20Overview.pbix)) to answer our questions. 
 
 ### For more information
 
@@ -53,10 +57,10 @@ Please review the directed links or [pdf](https://github.com/BrianLevesque/GC_Ca
 
 If you have any questions or feedback, please feel free to reach out to any of the authors.
 
-Brian Levesque brian.lev722@gmail.com
+- Brian Levesque brian.lev722@gmail.com
 
-Ilackkeya Bhavananthi bsilackkeya21@gmail.com
+- Ilackkeya Bhavananthi bsilackkeya21@gmail.com
 
-Osman Nayeem osman_nayeem@yahoo.com 
+- Osman Nayeem osman_nayeem@yahoo.com 
 
 
